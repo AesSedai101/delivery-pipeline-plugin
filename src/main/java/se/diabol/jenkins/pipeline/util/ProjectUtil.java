@@ -96,6 +96,7 @@ public final class ProjectUtil {
     }
 
     public static List<AbstractProject> getDownstreamProjects(AbstractProject<?, ?> project) {
+        //TODO: and possibly here...
         List<AbstractProject> result = new ArrayList<AbstractProject>();
         List<RelationshipResolver> resolvers= RelationshipResolver.all();
         for (RelationshipResolver resolver : resolvers) {

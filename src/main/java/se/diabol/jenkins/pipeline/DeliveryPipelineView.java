@@ -378,6 +378,9 @@ public class DeliveryPipelineView extends View {
 
     @Exported
     public List<Component> getPipelines() {
+        //TODO: extend this to:
+        // - show matrix builds as separate successors (SIT_build)
+        // - show multiple successors (build_bounce)
         try {
             LOG.fine("Getting pipelines!");
             List<Component> components = new ArrayList<Component>();

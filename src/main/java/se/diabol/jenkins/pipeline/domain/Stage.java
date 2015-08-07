@@ -151,6 +151,7 @@ public class Stage extends AbstractItem {
     }
 
     public static List<Stage> extractStages(AbstractProject firstProject) throws PipelineException {
+        //TODO: which I think will happen here?
         Map<String, Stage> stages = newLinkedHashMap();
         for (AbstractProject project : ProjectUtil.getAllDownstreamProjects(firstProject).values()) {
             Task task = Task.getPrototypeTask(project, project.getFullName().equals(firstProject.getFullName()));
